@@ -34,11 +34,17 @@ set foldmethod=indent
 let g:multi_cursor_exit_from_insert_mode=0
 
 " CTRLSF map
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-A>f <Plug>CtrlSFPrompt
+vmap     <C-A>f <Plug>CtrlSFVwordPath
+vmap     <C-A>F <Plug>CtrlSFVwordExec
+nmap     <C-A>n <Plug>CtrlSFCwordPath
+nmap     <C-A>p <Plug>CtrlSFPwordPath
+nnoremap <C-A>o :CtrlSFOpen<CR>
+nnoremap <C-A>t :CtrlSFToggle<CR>
+inoremap <C-A>t <Esc>:CtrlSFToggle<CR>
+
+" toggle paste mode
+nmap <leader>p :set paste<cr>
+vmap <leader>p :set paste<cr>
+nmap <leader>np :set nopaste<cr>
+vmap <leader>np :set nopaste<cr>

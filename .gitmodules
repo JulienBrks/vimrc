@@ -4,3 +4,8 @@
 [submodule "sources_non_forked/gruvbox"]
 	path = sources_non_forked/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
+[submodule "sources_non_forked/ctrlsf.vim"]
+	path = sources_non_forked/ctrlsf.vim
+	url = git@github.com:dyng/ctrlsf.vim.git
+  ignore = dirty
+

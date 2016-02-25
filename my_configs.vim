@@ -35,8 +35,6 @@ nmap <leader>n :NERDTreeFind<CR>
 
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-" set foldmethod=syntax
-
 " remove trailing whitespace when save
 autocmd BufWritePre * :%s/\s\+$//e
 

@@ -57,6 +57,12 @@ au FileType coffee imap <c-t> console.log <esc>hi
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 """"""""""""""""""""""""""""""
-" => Html section
+" => Html, Jade section
 """""""""""""""""""""""""""""""
+function! IndentFold()
+    setl foldmethod=indent
+    setl foldlevelstart=1
+endfunction
 
+au FileType jade call IndentFold()
+au FileType html call IndentFold()

@@ -8,8 +8,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'ap/vim-css-color'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()            " require
 filetype on    " required
+
+filetype plugin on
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
@@ -30,7 +35,11 @@ nmap <leader>n :NERDTreeFind<CR>
 
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-set foldmethod=indent
+" set foldmethod=syntax
+
+" remove trailing whitespace when save
+autocmd BufWritePre * :%s/\s\+$//e
+
 let g:multi_cursor_exit_from_insert_mode=0
 
 " CTRLSF map
@@ -48,3 +57,6 @@ nmap <leader>p :set paste<cr>
 vmap <leader>p :set paste<cr>
 nmap <leader>np :set nopaste<cr>
 vmap <leader>np :set nopaste<cr>
+
+" vim-css-color
+" let g:cssColorVimDoNotMessMyUpdatetime = 1
